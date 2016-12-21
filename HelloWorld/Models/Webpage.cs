@@ -10,6 +10,7 @@ namespace HelloWorld.Models
     {
         public int WebPageID { get; set; }
 
+        [Required]
         public string URLAddress { get; set; }
 
         public string Comment { get; set; }

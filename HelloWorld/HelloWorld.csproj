@@ -43,6 +43,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -160,14 +162,29 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LearningPlansController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\WebpagesController.cs" />
     <Compile Include="DAL\WebpageDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612150500544_InitialCreate.cs" />
+    <Compile Include="Migrations\201612150500544_InitialCreate.Designer.cs">
+      <DependentUpon>201612150500544_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612150528166_2.cs" />
+    <Compile Include="Migrations\201612150528166_2.Designer.cs">
+      <DependentUpon>201612150528166_2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612200401166_20161220-1.cs" />
+    <Compile Include="Migrations\201612200401166_20161220-1.Designer.cs">
+      <DependentUpon>201612200401166_20161220-1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\LearningPlan.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Person.cs" />
     <Compile Include="Models\Webpage.cs" />
@@ -238,6 +255,11 @@
     <Content Include="Views\Webpages\Details.cshtml" />
     <Content Include="Views\Webpages\Edit.cshtml" />
     <Content Include="Views\Webpages\Index.cshtml" />
+    <Content Include="Views\LearningPlans\Create.cshtml" />
+    <Content Include="Views\LearningPlans\Delete.cshtml" />
+    <Content Include="Views\LearningPlans\Details.cshtml" />
+    <Content Include="Views\LearningPlans\Edit.cshtml" />
+    <Content Include="Views\LearningPlans\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -248,6 +270,20 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201612150500544_InitialCreate.resx">
+      <DependentUpon>201612150500544_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612150528166_2.resx">
+      <DependentUpon>201612150528166_2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612200401166_20161220-1.resx">
+      <DependentUpon>201612200401166_20161220-1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

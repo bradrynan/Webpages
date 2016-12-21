@@ -14,5 +14,7 @@ namespace HelloWorld.DAL
         {
         }
         public DbSet<Webpage> Persons { get; set; }
+
+        public System.Data.Entity.DbSet<HelloWorld.Models.LearningPlan> LearningPlans { get; set; }
     }
 }
